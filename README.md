@@ -83,6 +83,8 @@ proton-mail/
 ├── README.md
 ├── .env.example
 ├── .gitignore
+├── assets/
+│   └── logo.svg      # listing avatar (Simple Icons Proton Mail, CC0)
 ├── src/
 │   ├── index.js      # stdio MCP server
 │   ├── bridge.js     # IMAP helpers (STARTTLS, rejectUnauthorized:false)
@@ -96,3 +98,7 @@ proton-mail/
 ## Author
 
 Paul / tinkabot — version `0.1.0`.
+
+## Trademark
+
+Proton, Proton Mail, and Proton Mail Bridge are trademarks of Proton AG. This community plugin is not affiliated with or endorsed by Proton AG. The logo in `assets/logo.svg` is the Simple Icons Proton Mail mark (CC0) for identification.
