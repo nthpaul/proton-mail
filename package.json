@@ -1,0 +1,29 @@
+{
+  "name": "proton-mail",
+  "version": "0.1.0",
+  "description": "Agent Plugin: Proton Mail via Proton Bridge IMAP (read-only)",
+  "type": "module",
+  "private": true,
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "check": "node --check src/index.js && node --check src/bridge.js && node --check src/ids.js && node --check src/types.js",
+    "test": "node --test test/*.test.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.12.0",
+    "imapflow": "^1.0.181"
+  },
+  "keywords": [
+    "proton",
+    "mail",
+    "imap",
+    "mcp",
+    "agent-plugin"
+  ],
+  "author": "Paul / tinkabot",
+  "license": "MIT"
+}

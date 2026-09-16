@@ -1,0 +1,17 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/mcp.schema.json",
+  "mcpServers": {
+    "proton-mail": {
+      "type": "stdio",
+      "command": "node",
+      "args": ["${PLUGIN_ROOT}/src/index.js"],
+      "cwd": "${PLUGIN_ROOT}",
+      "env": {
+        "PROTON_BRIDGE_USER": "${PROTON_BRIDGE_USER}",
+        "PROTON_BRIDGE_PASSWORD": "${PROTON_BRIDGE_PASSWORD}",
+        "PROTON_BRIDGE_HOST": "${PROTON_BRIDGE_HOST}",
+        "PROTON_IMAP_PORT": "${PROTON_IMAP_PORT}"
+      }
+    }
+  }
+}

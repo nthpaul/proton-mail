@@ -1,0 +1,45 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "proton-mail",
+  "version": "0.1.0",
+  "description": "Read-only Proton Mail access via Proton Bridge IMAP (list/search/read). Requires Proton Bridge running locally with IMAP enabled. Does not send or draft mail.",
+  "author": {
+    "name": "Paul",
+    "url": "https://github.com/nthpaul"
+  },
+  "keywords": [
+    "proton",
+    "mail",
+    "imap",
+    "proton-bridge",
+    "mcp"
+  ],
+  "license": "MIT",
+  "extensions": {
+    "com.tinkabot.proton-mail": {
+      "variables": {
+        "PROTON_BRIDGE_USER": {
+          "description": "Proton Bridge IMAP username (usually your Proton Mail address)",
+          "required": true,
+          "secret": true
+        },
+        "PROTON_BRIDGE_PASSWORD": {
+          "description": "Proton Bridge IMAP password (Bridge-generated, not your Proton account password)",
+          "required": true,
+          "secret": true
+        },
+        "PROTON_BRIDGE_HOST": {
+          "description": "Proton Bridge IMAP host",
+          "required": false,
+          "default": "127.0.0.1"
+        },
+        "PROTON_IMAP_PORT": {
+          "description": "Proton Bridge IMAP port",
+          "required": false,
+          "default": "1143"
+        }
+      },
+      "note": "Agent Plugins 1.0.0 has no top-level variables field; Bridge secrets are declared here and documented in README / .env.example. Set them in the host environment before launching the MCP server."
+    }
+  }
+}
