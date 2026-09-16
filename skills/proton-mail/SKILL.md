@@ -11,6 +11,11 @@ description: Read-only Proton Mail via Proton Bridge IMAP (list folders, list/se
 - Bridge IMAP credentials are configured (`PROTON_BRIDGE_USER`, `PROTON_BRIDGE_PASSWORD`).
 - **Not** for sending, drafting, or SMTP — v1 is read-only.
 
+## If Bridge is not set up
+
+Run the **setup-proton-bridge** skill first (install Bridge on this host, login,
+capture this install's mailbox password, start the daemon, register MCP).
+
 ## Prerequisites
 
 - [Proton Bridge](https://proton.me/mail/bridge) running locally with IMAP enabled.

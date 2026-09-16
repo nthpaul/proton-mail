@@ -26,6 +26,15 @@ Message **id**: `<folder>:<uid>` — e.g. `INBOX:4821`.
 
 Folder aliases: `inbox` → `INBOX`, `junk` → `Spam`, `bin` → `Trash`.
 
+
+## Setup skill (Grok Bot / agents)
+
+For first-time connect on a host, agents should follow
+`skills/setup-proton-bridge/SKILL.md`: install Bridge on **this** computer,
+secure-input Proton email + login password (+ OTP), capture **this install's**
+mailbox password from Bridge `info`, start the noninteractive daemon, then
+register the MCP. Never reuse another machine's mailbox password.
+
 ## Configure
 
 ```bash
@@ -80,6 +89,7 @@ proton-mail/
 │   ├── ids.js        # folder:uid + aliases
 │   └── types.js      # JSDoc domain types
 ├── skills/proton-mail/SKILL.md
+├── skills/setup-proton-bridge/SKILL.md
 └── test/ids.test.js
 ```
 
